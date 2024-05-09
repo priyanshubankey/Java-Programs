@@ -1,10 +1,10 @@
 class ThreadDemo extends Thread {
+    @Override
     public void run() {
         try {
             // Moving thread to Timed Waiting state
             Thread.sleep(150);
         } catch (InterruptedException e) {
-            e.printStackTrace();
         }
         System.out.println("State after completion: " + Thread.currentThread().getState());
     }
